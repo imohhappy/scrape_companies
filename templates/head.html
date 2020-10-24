@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link rel="stylesheet"
+href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+<div class="container" style="margin-top:5px">
+
+<!--<nav class="navbar navbar-expand bg-dark">
+     <a href="#" class="navbar-brand" style="color:red"> LEARNING </a>
+    <ul class="navbar-nav">
+         </ul>
+        <li class="nav-item"><a href="n/e" class="nav-link" style=" color:red">Exit</a></li>
+
+</nav>  -->
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a style="color:red" class="navbar-brand" href="{% url 'shop:shop' %}">SHOPPING MALL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample02">
+    <ul class="navbar-nav mr-auto">
+     <li class="nav-item"><a href="{% url 'parts:first' %}" class="nav-link">Housing</a></li>
+        <li class="nav-item"><a href="{% url 'about:about' %}" class="nav-link">shoes</a></li>
+        <li class="nav"><a href="{% url 'about:about' %}" class="nav-link">Frozen Food</a></li>
+        <li class="nav"><a href="{% url 'about:about' %}" class="nav-link">Cloth</a></li>
+        <li class="nav"><a href="{% url 'about:about' %}" class="nav-link">Contact</a></li>
+        <li class="nav"><a href="{% url 'about:about' %}" class="nav-link">About</a></li>
+    </ul>
+
+
+    <form class="form-inline my-2 my-md-0">
+
+    <nav class="nav"> <a href="#" style="color:red" class="nav-link">EXIT</a>
+
+</nav>
+    </form>
+
+  </div>
+</nav>
+
+</div>
+{% block content %}
+{% endblock %}
+<script src="{% static 'js/js/bootstrap.min.js' %}">
+</script></body>
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'head.html' %}
+{% block content %}
+<div class="container" style="margin-top:20px">
+    <P><marquee>There are so many Engine part in the country but u can only get the best parts at vector.plc.ng</marquee></P>
+    <h3 style="color: red">SAMPLES</h3>
+<div class="row">
+    {% for pip in var1 %}
+    <div class="col">
+        <div class="card"><img src="{{pip.image.url}}" style="height:150px">
+            <div class="card-body">
+                <h5 class="card-title">{{pip.name}}</h5>
+                <p class="card-text">{{pip.description}}</p>
+                <p class="card-text">${{pip.price}}</p>
+                <p class="card-text">Date: {{pip.date_pub|date:'j F,Y'}}</p>
+                <a href="{% url 'shop:shop' %}" class="btn btn-primary">Shopping mall</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<div class="row">
+    {% for pip in var2 %}
+    <div class="col">
+        <div class="card" style="margin-top:20px"><img src="{{pip.image.url}}" style="height:150px;display:flex; justify-content:center">
+            <div class="card-body">
+                <h5 class="card-title">{{pip.name}}</h5>
+                <p class="card-text">{{pip.description}}</p>
+                <p class="card-text">${{pip.price}}</p>
+                <p class="card-text">Date: {{pip.date_pub|date:'j F,Y'}}</p>
+                <a href="{% url 'shop:shop' %}" class="btn btn-primary">Shopping mall</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+<div class="container">
+        <h1><marquee>HOME APPLIANCES AT VECTOR.PLC.NG </marquee></h1>
+    <h3> HOME APPLIANCE</h3>
+    <div class="row">
+    {% for pip in var3 %}
+    <div class="col">
+        <div class="card" style="margin-top:20px"><img src="{{pip.image.url}}" style="height:250px;display:flex; justify-content:center">
+            <div class="card-body">
+                <h5 class="card-title">{{pip.name}}</h5>
+                <p class="card-text">{{pip.description}}</p>
+                <p class="card-text">${{pip.price}}</p>
+                <p class="card-text">Date: {{pip.date_pub|date:'j F,Y'}}</p>
+                <a href="{% url 'shop:shop' %}" class="btn btn-primary">Shopping mall</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row">
+    {% for pip in var4 %}
+    <div class="col">
+        <div class="card" style="margin-top:20px"><img src="{{pip.image.url}}" style="height:250px;display:flex; justify-content:center">
+            <div class="card-body">
+                <h5 class="card-title">{{pip.name}}</h5>
+                <p class="card-text">{{pip.description}}</p>
+                <p class="card-text">${{pip.price}}</p>
+                <p class="card-text">Date: {{pip.date_pub|date:'j F,Y'}}</p>
+                <a href="{% url 'shop:shop' %}" class="btn btn-primary">Shopping mall</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
